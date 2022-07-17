@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.8</version>
+		<version>2.6.9</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	
@@ -17,7 +17,7 @@
 	
 	<properties>
 		<java.version>11</java.version>
-		<spring-cloud.version>2021.0.2</spring-cloud.version>
+		<spring-cloud.version>2021.0.3</spring-cloud.version>
 	</properties>
 	
 	<dependencies>
@@ -34,11 +34,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-				
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -85,13 +80,19 @@
 		</dependency>
 -->
 
-	<!-- JDK 11 Support
-		The JAXB modules which the Eureka server depends upon were removed in JDK 11. If you intend to use JDK 11 when running a Eureka server you must include these dependencies in your POM or Gradle file.
-	-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+	
 	<dependency>
-		<groupId>org.glassfish.jaxb</groupId>
-		<artifactId>jaxb-runtime</artifactId>
+	    <groupId>de.codecentric</groupId>
+	    <artifactId>spring-boot-admin-starter-client</artifactId>    
+	    <!--2.4.1 Apr, 2021
+	    	2.7.2 Jul, 2022 -->
+	    <version>2.7.2</version>
 	</dependency>
+				
 
 	</dependencies>
 

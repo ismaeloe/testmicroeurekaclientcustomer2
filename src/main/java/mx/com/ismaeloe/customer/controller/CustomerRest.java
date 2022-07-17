@@ -130,14 +130,16 @@ public class CustomerRest {
                     return error;
 
                 }).collect(Collectors.toList());
-        /*
-        ErrorMessage errorMessageX = ErrorMessage.builder()
+       
+        ErrorMessage errorMessage = ErrorMessage.builder()
                 .code("01")
                 .messages(errors).build();
-        */
+        
+        /*Implemented with Lombok
         ErrorMessage errorMessage = new ErrorMessage();
         errorMessage.setCode("01");
         errorMessage.setMessages(errors);
+         */
         
         ObjectMapper mapper = new ObjectMapper();
         String jsonString="";
